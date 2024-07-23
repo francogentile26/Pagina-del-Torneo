@@ -47,6 +47,8 @@ nav .menu li a:hover {
 
 main {
     background-color: #1cb399;
+    flex: 1;
+    padding: 20px;
 }
 
 h1 {
@@ -54,33 +56,36 @@ h1 {
     margin-bottom: 20px;
 }
 
-main {
-    flex: 1;
-    padding: 20px;
-}
-
 .sheet-container {
     background-color: #1cb399;
-    position: relative;
-    width: 100%;
-    height: 420px;
+    border: 2px solid #004d40;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0; /* Elimina el padding adicional */
     overflow: hidden;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
-.sheet-container iframe {
-    position: absolute;
-    top: 0px; /* Ajusta este valor para ocultar el encabezado de la hoja */
-    left: 0;
-    width: 100%;
-    height: calc(100% + 50px); /* Ajusta este valor para incluir el contenido oculto */
+.table-style {
     border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0; /* Asegura que no haya márgenes adicionales */
+    padding: 0; /* Asegura que no haya padding adicional */
+    box-sizing: border-box; /* Asegura que el tamaño del iframe incluya cualquier borde */
 }
 
 .sancions-container {
     width: 100%;
     height: 420px;
     overflow: hidden;
-    margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+    margin-bottom: 20px;
 }
 
 footer {
@@ -128,7 +133,7 @@ footer a:hover {
 
 ol {
     list-style-type: decimal;
-    padding-left: 40px; /* Ajusta la cantidad de espacio a la izquierda */
+    padding-left: 40px;
 }
 
 ol li {
@@ -142,7 +147,6 @@ ol li {
 ol li:nth-child(odd) {
     background: #e9e9e9;
 }
-
 
 @media (max-width: 768px) {
     nav .menu {
@@ -175,11 +179,10 @@ ol li:nth-child(odd) {
 
     .sancions-container {
         width: 768px;
-        height: auto; /* Ajusta la altura según el contenido */
+        height: auto;
     }
 
     .sancions-container iframe {
-        height: auto; /* Asegura que el iframe ocupe toda la altura del contenedor */
+        height: auto;
     }
-
 }
